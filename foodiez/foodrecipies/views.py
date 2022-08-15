@@ -14,7 +14,7 @@ def home(request):
     return render(request, 'recipes/home.html', context)
 
 
-class RecipeListView(ListView):
+class RecipeListView(ListView): 
     model = models.Recipe
     template_name = 'recipes/home.html'
     context_object_name = 'recipes'

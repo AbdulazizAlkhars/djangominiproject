@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'users',
     'catagories',
     'crispy_forms',
+    'ingredients',
 ]
 
 MIDDLEWARE = [

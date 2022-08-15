@@ -5,7 +5,7 @@ from catagories.models import Catagory
 # Create your models here.
 
 
-class Recipe(models.Model):
+class Ingredient(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -14,7 +14,7 @@ class Recipe(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def get_absolute_url(self):
-        return reverse('recipes-detail', kwargs={'pk': self.pk})
+        return reverse('ingredients-detail', kwargs={'pk': self.pk})
 
     def __str__(self):
         return self.title
