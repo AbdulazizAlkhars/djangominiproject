@@ -1,0 +1,16 @@
+{% extends 'catagories/base.html' %}
+<!--  -->
+{% block content %}
+    <h1>Catagories App Home</h1>
+    {% for catagory in catagories %}
+        <div class="card my-4" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ catagory.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{catagory.author}}</h6>
+                <p class="card-text">{{ catagory.description }}</p>
+                <h6 class="card-subtitle mb-2 text-muted">{{catagory.updated_at|date:"F d, Y"}}</h6>
+                <a href="{% url 'catagories-detail' catagory.pk %}" class="card-link">View Catagory</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content%}
