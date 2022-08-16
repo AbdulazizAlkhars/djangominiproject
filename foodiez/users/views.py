@@ -17,7 +17,7 @@ def register(request):
     else:
         form = forms.UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
-
+# I like the effort to use messages, but why redirect the user to the login page? Instead, maybe it would be a better user experience to be logged in and redirected to a more relevant page
 
 @login_required()
 def profile(request):

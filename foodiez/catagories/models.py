@@ -4,7 +4,7 @@ from django.urls import reverse
 # Create your models here.
 
 
-class Catagory(models.Model):
+class Catagory(models.Model): # spelling mistake for class name, should be Category
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
     author = models.ForeignKey(User, on_delete=models.CASCADE)

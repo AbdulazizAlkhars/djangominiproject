@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'foodrecipies',
     'users',
     'catagories',
-    'crispy_forms',
+    'crispy_forms', # update this in the requirements.txt, this is a missing requirement (and why do you have djangorestframework in the requirements.txt)
     'ingredients',
 ]
 
